@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar"; // <-- 1. Navbar'ı buraya import et
+import Navbar from "@/components/Navbar";
+import { GoogleAnalytics } from '@next/third-parties/google'; // Google Analytics kütüphanesi
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,8 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={inter.className}>
-        <Navbar /> {/* <-- 2. Navbar'ı buraya ekle (children'ın üstüne) */}
+        <Navbar /> 
         {children}
+        
+        {/* Senin Ölçüm Kimliğin: G-QSXQMZXV1E */}
+        <GoogleAnalytics gaId="G-QSXQMZXV1E" />
       </body>
     </html>
   );

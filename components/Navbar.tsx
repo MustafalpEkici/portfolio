@@ -6,31 +6,14 @@ import { NAV_LINKS } from "@/constants";
 
 const Navbar = () => {
   const pathname = usePathname();
-
   return (
-    // "glass" class'ı yerine özel navbar stili (daha şeffaf)
-    <nav className="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-6xl z-50 rounded-2xl border border-white/60 bg-white/70 backdrop-blur-xl shadow-sm transition-all">
-      <div className="px-6 h-14 flex items-center justify-between">
-        <Link href="/" className="font-bold text-xl text-slate-900 hover:text-blue-600 transition tracking-tight">
-          MAE<span className="text-blue-600">.</span>
-        </Link>
-
-        <div className="flex gap-6 text-sm font-medium">
-          {NAV_LINKS.map((link) => (
-            <Link 
-              key={link.name} 
-              href={link.href} 
-              className={`relative transition-colors duration-300 ${
-                pathname === link.href ? "text-blue-700 font-semibold" : "text-slate-500 hover:text-slate-900"
-              }`}
-            >
-              {link.name}
-              {pathname === link.href && (
-                <span className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-1 h-1 bg-blue-600 rounded-full"></span>
-              )}
-            </Link>
-          ))}
+    <nav className="fixed inset-x-0 top-0 z-50 border-b border-black/15 bg-[#f2f0ea]/95 backdrop-blur-md">
+      <div className="mx-auto flex h-16 max-w-[1440px] items-center justify-between px-2.5 md:h-[72px] md:px-10">
+        <Link href="/" className="text-lg font-extrabold tracking-[-0.08em] text-[#141414] md:text-xl" aria-label="Mustafa Alp Ekici home">MAE<span className="text-[#e84b2c]">/</span></Link>
+        <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.1em] text-[#706e69] sm:gap-5 md:gap-7 md:text-[11px] md:tracking-[0.13em]">
+          {NAV_LINKS.map((link) => <Link key={link.name} href={link.href} className={`transition-colors ${pathname === link.href ? "text-[#141414]" : "hover:text-[#e84b2c]"}`}>{link.name}</Link>)}
         </div>
+        <span className="hidden text-[10px] font-bold uppercase tracking-[0.15em] text-[#e84b2c] lg:block">Based in Milano</span>
       </div>
     </nav>
   );

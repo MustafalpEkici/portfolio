@@ -1,4 +1,4 @@
-import { Linkedin, Mail } from "lucide-react";
+import { Linkedin, Mail, Phone } from "lucide-react";
 
 // --- NAVİGASYON LİNKLERİ ---
 export const NAV_LINKS = [
@@ -11,11 +11,26 @@ export const NAV_LINKS = [
 // --- HERO (GİRİŞ) BÖLÜMÜ ---
 export const HERO_CONTENT = {
   name: "Mustafa Alp Ekici",
-  role: "Researcher & EE Student",
-  description: "Senior Electrical and Electronics Engineering student at Middle East Technical University. Specializing in semiconductor physics, VLSI design, and device modeling. Passionate about researching next-generation microelectronic devices.",
-  location: "Ankara, Turkey",
-  tags: ["GPA: 3.55/4.0", "C2 English", "Cleanroom Certified"],
+  role: "MSc Electronics Engineering Student & Researcher",
+  description: "MSc student in Electronics Engineering at Politecnico di Milano, with a BSc in Electrical and Electronics Engineering from METU. I work across analog and mixed-signal IC design, semiconductor devices, VLSI, and biomedical sensing.",
+  location: "Milano, Italy",
+  tags: ["MSc at Politecnico di Milano", "METU BSc, GPA 3.61/4.00", "Cleanroom Certified"],
 };
+
+export const EDUCATION = [
+  {
+    institution: "Politecnico di Milano",
+    degree: "MSc in Electronics Engineering",
+    period: "Sept 2026 - Present",
+    detail: "Milan, Italy",
+  },
+  {
+    institution: "Middle East Technical University",
+    degree: "BSc in Electrical and Electronics Engineering",
+    period: "Sept 2022 - June 2026",
+    detail: "GPA: 3.61/4.00 | Specialization: Electronics, Biomedical",
+  },
+];
 
 // --- SOSYAL MEDYA LİNKLERİ (GitHub Kaldırıldı) ---
 export const SOCIAL_LINKS = [
@@ -29,6 +44,11 @@ export const SOCIAL_LINKS = [
     icon: Mail, 
     href: "mailto:mustafalpekici@gmail.com", 
     label: "Email" 
+  },
+  {
+    icon: Phone,
+    href: "tel:+393338297495",
+    label: "Phone",
   },
 ];
 
@@ -70,6 +90,12 @@ export const EXPERIENCE = [
 
 // --- PROJELER (PROJECTS) ---
 export const PROJECTS = [
+  {
+    title: "Analog IC Design: Op-Amp, Bandgap & LDO",
+    description: "Designed and simulated a two-stage CMOS operational amplifier, bandgap reference, and LDO in XFAB 180 nm CMOS using Cadence Virtuoso. Across PVT verification, the op-amp reached over 97 dB DC gain and over 5 MHz unity-gain bandwidth; the integrated regulator delivered approximately 1.794 V with over 60° phase margin.",
+    tags: ["Cadence Virtuoso", "Analog IC Design", "XFAB 180 nm", "PVT Verification"],
+    link: "/reports/Analog_IC_Design_OpAmp_Bandgap_LDO.pdf",
+  },
   {
     title: "Neural-Network Accelerator (VLSI)",
     description: "Designed a Neural Network Accelerator on XFAB 180nm technology. Completed the full RTL-to-GDSII flow using Cadence Genus & Innovus. Developed a Dual-MAC architecture achieving 2x throughput and 44% energy reduction compared to baseline.",

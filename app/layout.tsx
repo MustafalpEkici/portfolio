@@ -7,8 +7,8 @@ import { GoogleAnalytics } from '@next/third-parties/google'; // Google Analytic
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Mustafa Alp Ekici | Researcher",
-  description: "Portfolio of Mustafa Alp Ekici",
+  title: "Mustafa Alp Ekici | MSc Electronics Engineering Student",
+  description: "Portfolio of Mustafa Alp Ekici, MSc Electronics Engineering student at Politecnico di Milano.",
 };
 
 export default function RootLayout({
